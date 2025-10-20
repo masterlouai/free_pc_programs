@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000, #400000);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid red;
+      border-radius: 20px;
+      padding: 40px 60px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff4444;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      background-color: #ff0000;
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Download Ready!</h1>
+    <p>Your file is ready to download. Click below to begin.</p>
+    <a href="thankyou.html" class="download-btn">⬇️ Download Now</a>
+    <div class="info">File size: 110 MB | Format: exe</div>
+  </div>
+</body>
+</html>

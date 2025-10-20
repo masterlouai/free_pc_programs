@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000, #400000);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ff3333;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1.1rem;
+    }
+
+    .countdown {
+      color: #ff4444;
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      background-color: #ff0000;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Thank You for Downloading!</h1>
+  <p>Your download will start automatically in <span class="countdown" id="countdown">3</span> seconds...</p>
+  <a href="download.html" class="back-btn">⬅️ Back to Download Page</a>
+
+  <script>
+    let seconds = 3;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdown.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        // Trigger the download automatically
+        const link = document.createElement('a');
+        link.href = 'VSCodeUserSetup-x64-1.105.1.exe'; // Change to your real file
+        link.download = 'VSCodeUserSetup-x64-1.105.1.exe';
+        link.click();
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
